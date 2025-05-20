@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class StudentDivision {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double total = 0;
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Enter marks for subject " + i + ": ");
+            total += sc.nextDouble();
+        }
+        double percentage = total / 5;
+        System.out.println("Percentage: " + percentage);
+        if (percentage >= 60)
+            System.out.println("First division");
+        else if (percentage >= 50)
+            System.out.println("Second division");
+        else if (percentage >= 40)
+            System.out.println("Third division");
+        else
+            System.out.println("Fail");
+    }
+}
